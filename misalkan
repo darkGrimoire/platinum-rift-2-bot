@@ -3,6 +3,7 @@ arrKodeFak = ["160","161","162","163","164","165","166","167","168","169","197",
 arrNamaFak = ["FMIPA","SITH-S","SF","FITB","FTTM","STEI","FTSL","FTI","FSRD","FTMD","SBM","SITH-R","SAPPK","SF anomali"]
 
 #ini komentar woe
+#tambahan farrel
 while True:
 	nama = input("Masukkan nama: ")
 	fak = input("Masukkan fakultas (use ALL_DATABASE to override fakultas, might take a long time to process)\n: ")
