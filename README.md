@@ -1,7 +1,9 @@
 # Bot Platinum Rift 2
 
 Bot programming untuk tugas Day 3 Sekuro ITB 2019
+
 username codingame: wolfphysics
+
 [>Link Codingame Klik Disini<](https://www.codingame.com/ide/puzzle/platinum-rift-episode-2)
 
 ## Kontributor: 
