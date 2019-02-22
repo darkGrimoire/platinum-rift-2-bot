@@ -81,6 +81,7 @@ vis_zone = []
 * xcap_moves: list zona yang sudah kita miliki disekitar pods yg bersangkutan
 * def_moves: Apabila zona disekitar pods sudah dimiliki semua, pods akan mencari zona mana yang paling sedikit jumlah podsnya.
 * near_pods: berapa jumlah pods disekitar pods yang ditinjau
+
 Bagian kedua menentukan gerakan pods berdasarkan prioritas: cap_moves, lalu def_moves. Apabila pilihan gerakan di list moves lebih dari satu maka gerakan akan dibuat secara random.
 ```
 for i in range(len(pods)):								# check every zone where we have pods
