@@ -108,7 +108,7 @@ while True:
 	eff_path.reverse()
 	
 	# Strategy Decider
-	if len(my_zone) > (zone_count // 3) or zone_dist[enemyBase] <= 5 :
+	if len(my_zone) > (zone_count // 5) or zone_dist[enemyBase] <= 5 :
 		for i in range(len(pods)):
 			atk_route = False
 			for j in range(len(eff_path)):
