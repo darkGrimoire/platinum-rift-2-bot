@@ -1,3 +1,8 @@
+# platinum-rift-2-bot
+Bot tugas day 3 sekuro
+https://www.codingame.com/ide/puzzle/platinum-rift-episode-2
+## BLOM DI APA-APAIN WOE HAHA
+
 # Bot Platinum Rift 2
 
 Bot programming untuk tugas Day 3 Sekuro ITB 2019
@@ -12,37 +17,37 @@ username codingame: wolfphysics
 
 ## Penjelasan Kode
 1. Import modul-modul yang akan dipakai.
-'''
+```
 import sys
 import math
 import random
-'''
+```
 2. Input sistem: zone_id dan platinum_source
-'''
+```
 player_count, my_id, zone_count, link_count = [int(i) for i in input().split()]
 for i in range(zone_count):
 	zone_id, platinum_source = [int(j) for j in input().split()]
-'''
+```
 3. Links: Mengambil informasi tentang hubungan antarzona
-'''
+```
 links1 = []		#array for linked zone
 links2 = []
 for i in range(link_count):		
 	zone_1, zone_2 = [int(j) for j in input().split()]
 	links1.append(zone_1)
 	links2.append(zone_2)
-'''
+```
 4. Inisialisasi variabel-variabel yang akan digunakan dalam bot yang hanya di-set sekali per game.
-'''
+```
 if my_id == 0:
 	enemy_id=1
 else:
 	enemy_id=0
 enemyBase = -1
 myBase = -1
-'''
+```
 5. Mencari tahu tile-tile disebelah x dengan memanfaatkan Links
-'''
+```
 def moves(x):							#input a zone ID and gives back the adjacent zone in an array
 	aval = []
 	for i in range(len(links1)):
@@ -52,9 +57,9 @@ def moves(x):							#input a zone ID and gives back the adjacent zone in an arra
 		if x == links2[i]:
 			aval.append(links1[i])
 	return aval
-'''
+```
 6. Mengambil informasi-informasi berupa: HQ (dilakukan sekali per game), dimana letak pods kita dan musuh serta ada berapa saja.
-'''
+```
 vis_zone = []
 	pods = []
 	my_zone = []
@@ -75,14 +80,14 @@ vis_zone = []
 		else:
 			if pods_p1 > 0:
 				pods.append([z_id, pods_p1, pods_p0])
-'''
+```
 7. Strategi "Scatter-out". Bagian pertama mencari tahu tentang:
 * cap_moves: list zona yang belum kita miliki disekitar pods yg bersangkutan
 * xcap_moves: list zona yang sudah kita miliki disekitar pods yg bersangkutan
 * def_moves: Apabila zona disekitar pods sudah dimiliki semua, pods akan mencari zona mana yang paling sedikit jumlah podsnya.
 * near_pods: berapa jumlah pods disekitar pods yang ditinjau
 Bagian kedua menentukan gerakan pods berdasarkan prioritas: cap_moves, lalu def_moves. Apabila pilihan gerakan di list moves lebih dari satu maka gerakan akan dibuat secara random.
-'''
+```
 for i in range(len(pods)):								# check every zone where we have pods
 		avail_moves = moves(pods[i][0])						# moves available to do
 		cap_moves = []										# capturing moves (neutral zones)
@@ -130,4 +135,4 @@ for i in range(len(pods)):								# check every zone where we have pods
 			else:
 				rdm_moves=def_moves[random.randint(0, len(def_moves)-1)]
 				print(n_pods, str(pods[i][0]), str(rdm_moves), end=" ")
-'''
+```
