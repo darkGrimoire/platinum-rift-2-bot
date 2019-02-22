@@ -1,8 +1,3 @@
-# platinum-rift-2-bot
-Bot tugas day 3 sekuro
-https://www.codingame.com/ide/puzzle/platinum-rift-episode-2
-## BLOM DI APA-APAIN WOE HAHA
-
 # Bot Platinum Rift 2
 
 Bot programming untuk tugas Day 3 Sekuro ITB 2019
